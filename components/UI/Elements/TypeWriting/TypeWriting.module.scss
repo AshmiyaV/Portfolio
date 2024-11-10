@@ -1,0 +1,15 @@
+.TypeWriter{
+    font-size: 100px;
+    font-weight: 500;
+    line-height: 100px;
+    width: fit-content;
+    white-space: nowrap;
+    background-color: #ccfcff; 
+    background-image: linear-gradient(to right, #ccfcff, #72ebf6, #1e90ff);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
