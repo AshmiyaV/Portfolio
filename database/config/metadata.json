@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "name": "Ashmiya VijayaChandran",
+    "title": "Ashmiya VijayaChandran - Front-End Developer",
+    "description": "I develop accessible, responsive, interactive, and animated websites with a strong focus on performance.",
+    "timeZone": "America/Los_Angeles",
+    "locale": "en-US"
+  },
+  "personal": {
+    "name": "Ashmiya VijayaChandran",
+    "role": "Front-End Developer",
+    "experience": 7,
+    "email": "vijayachandran.a@northeastern.edu",
+    "phone": "+12538316296",
+    "city": "Boston",
+    "state": "MA",
+    "country": "USA",
+    "resumeURL": ""
+  },
+  "social": {
+    "twitter": "",
+    "instagram": "",
+    "linkedin": "https://www.linkedin.com/in/ashmiya-vijaya-chandran/",
+    "github": "https://github.com/AshmiyaV",
+    "codepen": ""
+  }
+}
