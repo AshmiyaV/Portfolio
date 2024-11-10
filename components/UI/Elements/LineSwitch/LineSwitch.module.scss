@@ -1,0 +1,59 @@
+.toggleSwitchContainer {
+    display: inline-flex; /* Inline-flex to take up only the necessary space */
+    align-items: center;
+    gap: 10px; /* Space between labels and the toggle switch */
+  
+    .leftLabel,
+    .rightLabel {
+      font-size: 16px;
+      font-weight: bold;
+      color: hsl(var(--color-primary));
+      white-space: nowrap; /* Prevents labels from wrapping */
+    }
+  }
+  
+  .toggleSwitch {
+    position: relative;
+    width: 75px; /* Default width for the switch */
+    height: 34px; /* Height for consistency */
+    display: inline-block;
+  
+    &Checkbox {
+      display: none;
+    }
+  
+    &Label {
+      display: block;
+      overflow: hidden;
+      cursor: pointer;
+      border: 0 solid #bbb;
+      border-radius: 20px;
+      background-color: #553c6f;
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+  
+    &Switch {
+      display: block;
+      width: 35%;
+      height: 24px; /* Adjusted height of the switch */
+      margin: 5px;
+      background: #fff;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 50%;
+      border-radius: 20px;
+      transition: all 0.3s ease-in-out;
+    }
+  
+    &Checkbox:checked + &Label {
+      background-color: #122b86;
+  
+      .toggleSwitchSwitch {
+        right: 0;
+      }
+    }
+  }
+  
