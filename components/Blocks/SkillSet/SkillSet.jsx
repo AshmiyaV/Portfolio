@@ -18,6 +18,7 @@ import Image from "next/image";
 import Ticker from "@/components/UI/Elements/Ticker/Ticker";
 import { DiMongodb, DiPostgresql, DiMysql } from "react-icons/di";
 import LineSwitch from '@/components/UI/Elements/LineSwitch/LineSwitch';
+import SkillsList from './SkillsList';
 
 export default function SkillSet() {
     gsap.registerPlugin(Draggable, 
@@ -99,8 +100,8 @@ export default function SkillSet() {
                     <Blobs type={'v1'} classVariable={`${styles.blob} ${styles.blobV1}`}/>
                 </div>
                 <div className={styles.grid}>
-                    <Title color={'white'}><span>My</span> <br/> Skillset</Title>
-                    <LineSwitch Name="SkillsView" leftLabel="Circular" rightLabel="List" />
+                    {/* <Title color={'white'}><span>My</span> <br/> Skillset</Title>
+                    <LineSwitch Name="SkillsView" leftLabel="Circular" rightLabel="List" /> */}
                     <div className={styles.circularCarouselWrapper}>
                         <div className={styles.collisionDiv} ref={collisionDiv}></div>
                         <div className={styles.circularCarousel}>
