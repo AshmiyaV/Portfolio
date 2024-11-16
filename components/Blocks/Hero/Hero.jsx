@@ -130,7 +130,7 @@ export default function Hero() {
                                 <Image src="/AshmiyaMain.png" alt="Ashmiya VC" quality={100} width={150} height={150}/>
                             </figure>
                          </div>
-                         <p className={styles.description}>Passionate software engineer creating responsive, high-performance web apps with scalable solutions and seamless user experiences.</p>
+                         <p ref={descRef} className={styles.description}>Passionate software engineer creating responsive, high-performance web apps with scalable solutions and seamless user experiences.</p>
                     </div>
                     <div className={styles.background}>
 

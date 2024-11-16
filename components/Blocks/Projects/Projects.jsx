@@ -14,14 +14,21 @@ export default function Projects(props) {
   }
   const Projects = [
     {
+      projectTitle: "YouthGPS",
+          projectDesc: "A community-focused web platform that connects people with local events, marketplace activities, and community support services based on their location. The platform enables users to organize events, buy/sell items, share excess food, coordinate donations, and stay updated with local happenings and weather conditions, all within their specific zip code area.",
+          projectLink: "https://github.com/AshmiyaV/youth-gps",
+          blobTypeForProject: "v1",
+          blobType: "blobV1"
+  },
+    {
         projectTitle: "locALL",
-            projectDesc: "A community-focused web platform that connects people with local events, marketplace activities, and community support services based on their location. The platform enables users to organize events, buy/sell items, share excess food, coordinate donations, and stay updated with local happenings and weather conditions, all within their specific zip code area.",
+            projectDesc: "YouthGPS is a mental health and substance abuse screening platform developed for SAMHSA that provides adaptive assessments for youth. The system features dynamic questionnaires that adjust based on user responses, real-time visualization dashboards for tracking outcomes, and secure data handling protocols. Built with React and Python, deployed on AWS, the platform streamlines the screening process while ensuring sensitive health data protection and providing administrators with actionable insights through comprehensive reporting tools.",
             projectLink: "https://github.com/AshmiyaV/loc-all",
-            blobTypeForProject: "v1",
+            // blobTypeForProject: "v1",
             blobType: "blobV1"
     },
     {
-        projectTitle: "CloudNotifyOps",
+        projectTitle: "CloudGuard",
             projectDesc: "A serverless architecture on Google Cloud Platform that automates real-time notifications and database operations using Cloud Functions and Pub/Sub. The project implements Infrastructure as Code with Terraform and includes CI/CD through GitHub Actions, making it a comprehensive solution for managing cloud-based notification systems and operational tasks.",
             projectLink: "https://github.com/AshmiyaV/CloudGuard",
             blobTypeForProject: "v2",
@@ -34,7 +41,7 @@ export default function Projects(props) {
            <Title><span>Projects</span></Title>
         {Projects.map((project, index) => (
     <div key={index} className={styles.projectWindow} id={index}>
-              <Blobs type={project.blobTypeForProject} classVariable={`${styles.blob} ${styles[project.blobType]}`}/>
+              {project.blobTypeForProject && <Blobs type={project.blobTypeForProject} classVariable={`${styles.blob} ${styles[project.blobType]}`}/>}
       <div className={`${styles.projectWrapper} ${project.className || ''} ${isExpanded ? styles.expanded : ''}`}>
         <div className={styles.aboutProject}>
           <div className={styles.projectHeader}>

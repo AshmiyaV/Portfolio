@@ -23,6 +23,9 @@
 }
 
 @media screen and (max-width: 480px) {
+  .section {
+    padding: calc(var(--y-spacing)/2) 0 var(--x-spacing);
+  }
   .ticker__text {
     font-size: 3rem;
     svg {

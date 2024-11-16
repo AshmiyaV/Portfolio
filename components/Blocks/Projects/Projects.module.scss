@@ -144,11 +144,11 @@
     overflow: hidden;
     &.blobV1 {
       top: 8%;
-    //   height: 15%;
+      height: 100%;
     }
     &.blobV2 {
-      top: 10%;
-    //   height: 15%;
+      top: -50%;
+      height: 100%;
     }
   }
 

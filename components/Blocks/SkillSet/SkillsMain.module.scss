@@ -22,3 +22,9 @@
       height: 40%;
     }
   }
+
+  @media screen and (max-width: 480px) {
+    .section{
+    margin-top: 30%;
+    }
+  }
