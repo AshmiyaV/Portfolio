@@ -291,3 +291,12 @@
   color: rgb(219, 218, 218);
 }
 }
+
+@media screen and (max-width: 480px) {
+  .background{
+    height: 70%;
+  }
+  .line{
+    height: 75% !important;
+  }
+}
