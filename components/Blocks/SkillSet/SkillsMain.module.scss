@@ -1,7 +1,7 @@
 .section{
     position: relative;
-    padding: var(--x-spacing) 0;
-    background: hsl(var(--color-bg-alt));
+    padding: 0;
+    background: hsl(var(--color-bg-alt)) !important;
   }
 
   .blobs{

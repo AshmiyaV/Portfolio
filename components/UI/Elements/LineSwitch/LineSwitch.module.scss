@@ -1,59 +1,122 @@
 .toggleSwitchContainer {
-    display: inline-flex; /* Inline-flex to take up only the necessary space */
-    align-items: center;
-    gap: 10px; /* Space between labels and the toggle switch */
-  
-    .leftLabel,
-    .rightLabel {
-      font-size: 16px;
-      font-weight: bold;
-      color: hsl(var(--color-primary));
-      white-space: nowrap; /* Prevents labels from wrapping */
+  display: inline-flex; /* Inline-flex to take up only the necessary space */
+  align-items: center;
+  gap: 10px; /* Space between labels and the toggle switch */
+  margin: 2% 0 0 5%;
+
+  .leftLabel,
+  .rightLabel {
+    font-size: 2rem; /* Use rem for scalable font size */
+    font-weight: bold;
+    color: hsl(var(--color-primary));
+    white-space: nowrap; /* Prevents labels from wrapping */
+  }
+}
+
+.toggleSwitch {
+  position: relative;
+  width: 75px; /* Default width for the switch */
+  height: 34px; /* Height for consistency */
+  display: inline-block;
+
+  &Checkbox {
+    display: none; /* Hide the checkbox */
+  }
+
+  &Label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 0 solid #bbb;
+    border-radius: 20px;
+    background-color: #553c6f; /* Default background color */
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  .toggleSwitchSwitch {
+    display: block;
+    width: 42%; /* Width of the switch inside the label */
+    height: 33px; /* Height of the switch */
+    background: #fff; /* Switch background color */
+    position: absolute;
+    top: 50%; /* Center switch vertically */
+    right: 22%; /* Initially position on the right side */
+    transform: translate(50%, -50%); /* Ensure it starts at the right */
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+  }
+
+  /* When the checkbox is checked, change the background and move the switch */
+  &Checkbox:checked + &Label {
+    background-color: #122b86; /* Change label background on checked state */
+
+    .toggleSwitchSwitch {
+      // right: 0px; /* Remove right positioning */
+      left: 22%; /* Move switch to the left */
+      transform: translate(-50%, -50%); /* Center vertically */
     }
   }
-  
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
   .toggleSwitch {
-    position: relative;
-    width: 75px; /* Default width for the switch */
-    height: 34px; /* Height for consistency */
-    display: inline-block;
-  
-    &Checkbox {
-      display: none;
-    }
-  
+    width: 60px; /* Smaller width for medium screens */
+    height: 28px; /* Adjust height proportionally */
+
     &Label {
-      display: block;
-      overflow: hidden;
-      cursor: pointer;
-      border: 0 solid #bbb;
-      border-radius: 20px;
-      background-color: #553c6f;
-      height: 100%;
-      width: 100%;
-      position: relative;
-    }
-  
-    &Switch {
-      display: block;
-      width: 35%;
-      height: 24px; /* Adjusted height of the switch */
-      margin: 5px;
-      background: #fff;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 50%;
-      border-radius: 20px;
-      transition: all 0.3s ease-in-out;
-    }
-  
-    &Checkbox:checked + &Label {
-      background-color: #122b86;
-  
       .toggleSwitchSwitch {
-        right: 0;
+        height: 20px; /* Adjusted height of the switch */
+        margin: 4px;
       }
     }
   }
-  
+
+  .toggleSwitchContainer {
+    .leftLabel,
+    .rightLabel {
+      font-size: 0.9rem; /* Reduce font size slightly */
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .toggleSwitch {
+    width: 50px; /* Smaller width for small screens */
+    height: 22px; /* Adjust height proportionally */
+
+    &Label {
+      .toggleSwitchSwitch {
+        height: 22px; /* Adjusted height of the switch */
+        margin: 3px;
+        width: 44%;
+        right: 15%; /* Move switch to the left */
+        top: 8px;
+      }
+    }
+      &Checkbox:checked + &Label {
+    background-color: #122b86; /* Change label background on checked state */
+
+    .toggleSwitchSwitch {
+      // right: 0px; /* Remove right positioning */
+      width: 46%;
+      right: 37%; /* Move switch to the left */
+      top: 8px;
+      left: 16%;
+      // transform: translate(-50%, -50%); /* Center vertically */
+    }
+  }
+  }
+
+  .toggleSwitchContainer {
+    gap: 5px; /* Reduce spacing for smaller screens */
+    margin: 5% 0 0 2%; /* Adjust margin */
+
+    .leftLabel,
+    .rightLabel {
+      font-size: 1rem; /* Further reduce font size */
+    }
+  }
+}

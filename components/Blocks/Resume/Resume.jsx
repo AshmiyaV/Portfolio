@@ -11,6 +11,7 @@ import Container from "@/components/UI/Layout/Layout";
 import FancyButton from "@/components/UI/Elements/Button/Button";
 import commonConfig from "@/database/config/metadata.json";
 import Link from "next/link";
+import Title from '@/components/UI/Elements/Title/Title';
 
 export default function Resume() {
     const container = useRef();
@@ -44,6 +45,7 @@ export default function Resume() {
 
     return (
         <section className={styles.section} ref={container} id={'resume'}>
+             <Title><span>Resume</span></Title>
             <Container>
                 <div className={styles.content}>
                     <div className={styles.cardGroup} ref={cardGroup}>
@@ -78,7 +80,6 @@ export default function Resume() {
                             </div>
                         </div>
                     </div>
-
                     <div className={styles.cta}>
                         <FancyButton theme='button-1' target={'_blank'} link={commonConfig.personal.resumeURL}>View
                             Resume</FancyButton>
@@ -86,7 +87,6 @@ export default function Resume() {
                     <div className={styles.links}>
                         <Link href={`${commonConfig.social.linkedin}`} target={'_blank'}>LinkedIn</Link>
                         <Link href={`${commonConfig.social.github}`} target={'_blank'}>GitHub</Link>
-                        <Link href={`${commonConfig.social.codepen}`} target={'_blank'}>CodePen</Link>
                     </div>
                 </div>
             </Container>

@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './LineSwitch.module.scss';
 
-export default function LineSwitch({ Name, leftLabel, rightLabel }) {
+export default function LineSwitch({ Name, leftLabel = 'List', rightLabel = 'Circular', onToggle }) {
+  const [selected, setSelected] = useState('circular');
+
+  const handleChange = (event) => {
+    const newValue = event.target.checked ? 'circular' : 'list';
+    setSelected(newValue);
+    if (onToggle) {
+      onToggle(newValue);
+    }
+  };
+
   return (
     <div className={styles.toggleSwitchContainer}>
       <span className={styles.leftLabel}>{leftLabel}</span>
@@ -11,6 +21,8 @@ export default function LineSwitch({ Name, leftLabel, rightLabel }) {
           className={styles.toggleSwitchCheckbox}
           name={Name}
           id={Name}
+          checked={selected === 'circular'}
+          onChange={handleChange}
         />
         <label className={styles.toggleSwitchLabel} htmlFor={Name}>
           <span className={styles.toggleSwitchSwitch}></span>

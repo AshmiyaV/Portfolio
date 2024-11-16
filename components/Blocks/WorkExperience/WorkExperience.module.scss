@@ -1,17 +1,25 @@
+@import '/assets/media-queries.scss';
+
+.mainDiv{
+    overflow: hidden;
+}
 .timelineContainer {
     width: 100%;
     max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 5%;
+    // margin: 60px auto;
+    // padding: 0 5%;
+    padding: 0 calc(var(--x-spacing)/4);
     position: relative;
     z-index: 1;
+    // overflow: hidden;
+    place-self: center;
 }
   
 .timeline {
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 60px 0;
+    padding: 1% 0;
     overflow: hidden;
   
     &::before {
@@ -85,6 +93,20 @@
         opacity: 1;
     }
 }
+
+  .blob{
+    pointer-events: none;
+    user-select: none;
+    overflow: hidden;
+    &.blobV1 {
+      top: 20%;
+      height: 15%;
+    }
+    &.blobV2 {
+      top: 55%;
+      height: 15%;
+    }
+  }
   
 .timelineDot {
     position: absolute;
@@ -121,7 +143,7 @@
     margin-bottom: 30px;
     font-size: 2.2rem;
     font-weight: 600;
-    background: linear-gradient(to right, #deccff, #c772f6, #1e90ff);
+    background: linear-gradient(to right, #deccff, #c772f6);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -221,7 +243,7 @@
 @media screen and (max-width: 768px) {
     .timelineContainer {
         padding: 40px 20px;
-        margin: 50px auto;
+        margin: 0 auto;
     }
   
     .timeline::before {
@@ -260,7 +282,7 @@
   
 @media screen and (max-width: 480px) {
     .timelineContainer {
-        padding: 30px 15px;
+        padding: 5px 15px;
     }
   
     .timelineItem {

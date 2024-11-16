@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import styles from './WorkExperience.module.scss';
 import { FaChevronDown, FaGraduationCap, FaBriefcase } from 'react-icons/fa';
+import Title from '@/components/UI/Elements/Title/Title';
+import Blobs from "@/components/UI/Elements/Blobs/Blobs";
 
 function WorkExperience() {
   const [activeItem, setActiveItem] = useState(null);
@@ -45,7 +47,7 @@ function WorkExperience() {
     {
       id: 4,
       year: "Aug 2016 - April 2020",
-      title: "Bachelor Engineering",
+      title: "Bachelor of Engineering",
       institution: "College of Engineering Guindy, Anna University",
       description: "• Secured top grades in Data Structures and Object-Oriented Programming\n" +
         "• Completed practical training in OOP Lab with hands-on Java programming\n" +
@@ -55,7 +57,11 @@ function WorkExperience() {
   ];
 
   return (
-    <div className={styles.timelineContainer} id={'experience'}>
+  <section className={styles.mainDiv} id={'experience'}>
+    <Title><span>Work</span> <br/> <span>Experience</span></Title>
+    <div className={styles.timelineContainer}>
+    <Blobs type={'v1'} classVariable={`${styles.blob} ${styles.blobV1}`}/>
+    <Blobs type={'v2'} classVariable={`${styles.blob} ${styles.blobV2}`}/>
       <div className={styles.timeline}>
         {timelineData.map((item) => (
           <div
@@ -90,6 +96,7 @@ function WorkExperience() {
         ))}
       </div>
     </div>
+    </section>
   );
 }
 

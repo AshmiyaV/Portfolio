@@ -1,10 +1,17 @@
+@import '/assets/media-queries.scss';
+
+.mainDiv{
+    overflow: hidden !important;
+}
 .projectWindow {
     width: 100%;
     max-width: 1200px;
     margin: 60px auto;
-    padding: 0 5%;
+    padding: 0 calc(var(--y-spacing)/4);
+    // padding: 0 5%;
     position: relative;
     z-index: 1;
+    // overflow-x: hidden;
 }
   
 .projectWrapper {
@@ -131,6 +138,20 @@
     }
 }
   
+.blob{
+    pointer-events: none;
+    user-select: none;
+    overflow: hidden;
+    &.blobV1 {
+      top: 8%;
+    //   height: 15%;
+    }
+    &.blobV2 {
+      top: 10%;
+    //   height: 15%;
+    }
+  }
+
 .projectContent {
     position: relative;
     margin: 20px 0;

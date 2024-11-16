@@ -2,7 +2,7 @@
 
 import React, {useRef, useState} from 'react';
 
-import styles from './SkillSet.module.scss';
+import styles from './SkillsMain.module.scss';
 
 import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
@@ -22,8 +22,8 @@ export default function SkillsMain() {
         // InertiaPlugin,
          MotionPathPlugin, ScrollTrigger);
 
-    const container = useRef();
-    const collisionDiv = useRef();
+    const skillsContainer = useRef();
+    // const collisionDiv = useRef();
 
     const handleSelectedView = (view) => {
         setSelectedView(view)
@@ -31,16 +31,13 @@ export default function SkillsMain() {
 
     return (
         <>
-            <section className={`${styles.section}`} id={'skills'} ref={container}>
+            <section className={styles.section} id={'skills'} ref={skillsContainer}>
                 <div className={styles.blobs}>
                     <Blobs type={'v2'} classVariable={`${styles.blob} ${styles.blobV2}`}/>
                     <Blobs type={'v1'} classVariable={`${styles.blob} ${styles.blobV1}`}/>
                 </div>
-                    {/* <Title color={'white'}><span>My</span> <br/> <span>Skillset</span></Title> */}
-                    <Title>
-                    <span>My</span> <br/> <span>Skillset</span>
-      </Title>
-                    <LineSwitch Name="SkillsView" leftLabel="Circular" rightLabel="List" onToggle={handleSelectedView} />
+                    <Title><span>My</span> <br/> <span>Skillset</span></Title>
+                    <LineSwitch Name="SkillsView" leftLabel="List" rightLabel="Circular" onToggle={handleSelectedView} />
                     {
                         selectedView === "circular" ?
                         (

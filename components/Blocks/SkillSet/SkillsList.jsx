@@ -84,7 +84,7 @@ export default function SkillCard({id}) {
 
   return (
     <div className={styles.skillContainer} id={id}>
-      <div className={styles.skillHeader}>My Skills</div>
+      {/* <div className={styles.skillHeader}>My Skills</div> */}
       <SkillSection title="Languages" skills={skillsData.languages} />
       <SkillSection title="Frameworks" skills={skillsData.frameworks} />
       <SkillSection title="Libraries" skills={skillsData.libraries} />

@@ -4,14 +4,8 @@ import React, {useEffect, useState, useRef} from 'react';
 import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
-// import {DrawSVGPlugin} from "gsap/DrawSVGPlugin";
-// import {SplitText} from "gsap/SplitText";
-
 import styles from './Hero.module.scss'
 import Image from "next/image";
-import commonConfig from '@/database/config/metadata.json';
-import FadeIn from "@/components/UI/FadeIn/FadeIn";
-import Ashmiya from "@/assets/images/Ashmiya.jpeg"
 import PreLoader from "@/components/Blocks/PreLoader/PreLoader";
 import Blobs from "@/components/UI/Elements/Blobs/Blobs";
 import TypeWriting from "@/components/UI/Elements/TypeWriting/TypeWriting";
@@ -23,6 +17,7 @@ export default function Hero() {
     const fakeContainer = useRef();
     const textRef = useRef(null);
     const descRef = useRef();
+    const sphere = useRef();
     const {contextSafe} = useGSAP({scope: container});
 
     const handlePreloaderComplete = () => {
@@ -31,10 +26,7 @@ export default function Hero() {
 
     // GSAP Animations
     useGSAP(() => {
-        gsap.registerPlugin(ScrollTrigger, 
-            // DrawSVGPlugin, 
-            // SplitText
-        );
+        gsap.registerPlugin(ScrollTrigger);
         gsap.set(`.${styles.line} svg path`, {
             drawSVG: '0%',
         });
@@ -57,11 +49,6 @@ export default function Hero() {
 
             // Hero Title
             textRef.current.style.opacity = 1;
-            // const splitText = new SplitText(textRef.current, {
-            //     type: 'words, lines',
-            //     linesClass: `${styles.splitLine}`,
-            //     wordsClass: `${styles.splitWords}`,
-            // });
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: textRef.current,
@@ -69,13 +56,6 @@ export default function Hero() {
                     start: "top 90%",
                 },
             });
-            // tl.from(splitText.words, {
-            //     duration: 0.4,
-            //     autoAlpha: 0,
-            //     y: 120,
-            //     ease: "power1.out",
-            //     stagger: 0.08,
-            // });
 
             // Description
             gsap.to(descRef.current, {
@@ -139,28 +119,18 @@ export default function Hero() {
                         <div className={styles.title}>
                             <h1 ref={textRef}>
                                 I&apos;m Ashmiya VijayaChandran
-                                {/* <span className={`${styles.icon}`}>
-                                    <span className={styles.reveal}></span>
-                                    <Image
-                                        src="/hero-image.jpg"
-                                        alt={commonConfig.metadata.title}
-                                        width={640}
-                                        height={300}
-                                        priority
-                                        className={styles.heroImg}
-                                    />
-                                </span> */}
                                  <br/>
-                                {/* Frontend Developer. */}
                                  <div className={styles.typewriter}>
                                  <TypeWriting />
                                  </div>
-                            </h1>
-                            {/* <p ref={descRef}>{commonConfig.metadata.description}</p> */}                 
+                            </h1>               
                         </div>
                         <div className={styles.myImage}>
-                         <Image width={"50%"} height={"50%"} src={Ashmiya} />
+                               <figure className={styles.figure}>
+                                <Image src="/AshmiyaMain.png" alt="Ashmiya VC" quality={100} width={150} height={150}/>
+                            </figure>
                          </div>
+                         <p className={styles.description}>Passionate software engineer creating responsive, high-performance web apps with scalable solutions and seamless user experiences.</p>
                     </div>
                     <div className={styles.background}>
 
