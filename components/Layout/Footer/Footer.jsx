@@ -22,7 +22,7 @@ export default function Footer() {
             <div className={styles.inner}>
                 <div className={styles.connect}>
                     <h2 className={styles.title}>
-                        <span>Let's</span>  <br/>Connect.
+                    <span>Let&apos;s</span> <br />Connect.
                     </h2>
 
                     <Link className={styles.email} href={`mailto:${commonConfig.personal.email}`}>

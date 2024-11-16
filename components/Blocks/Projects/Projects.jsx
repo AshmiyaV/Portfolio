@@ -33,7 +33,7 @@ export default function Projects(props) {
     <section className={styles.mainDiv} id="projects">
            <Title><span>Projects</span></Title>
         {Projects.map((project, index) => (
-    <div className={styles.projectWindow} id={index}>
+    <div key={index} className={styles.projectWindow} id={index}>
               <Blobs type={project.blobTypeForProject} classVariable={`${styles.blob} ${styles[project.blobType]}`}/>
       <div className={`${styles.projectWrapper} ${project.className || ''} ${isExpanded ? styles.expanded : ''}`}>
         <div className={styles.aboutProject}>
