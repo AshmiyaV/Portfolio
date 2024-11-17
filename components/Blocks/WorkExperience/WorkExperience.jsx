@@ -21,35 +21,46 @@ function WorkExperience() {
       type: "education"
     },
     {
-        id: 2,
+      id: 2,
+      year: "Sept 2024 - Present",
+      title: "Graduate Teaching Assistant",
+      institution: "Northeastern University",
+      description: "• Assisted students in mastering concepts related to HTML, CSS, REST, HTTP, SASS, MERN stack, Agile methodologies, and Domain-Driven Design as part of the 'Web Design and User Experience Engineering' course\n" +
+        "• Guided students in implementing responsive designs, debugging code, and understanding user-centric design principles\n" +
+        "• Supported the application of Agile practices and Domain-Driven Design techniques in project development\n" +
+        "• Provided mentorship during coding assignments, facilitated lab sessions, and ensured adherence to best practices in modern web development\n" +
+        "• Collaborated with the professor to develop course materials and evaluate project submissions",
+      type: "education"
+    },
+    {
+        id: 3,
         year: "Jan 2024 - Sept 2024",
         title: "Web Application Developer",
         institution: "Northeastern University",
-        description: "• Developed RESTful APIs with Spring Boot & Hibernate achieving sub-second response times\n" +
-          "• Reduced processing time by 40% using Apache Camel parallel threading\n" +
-          "• Migrated SOAP to REST APIs, increasing transaction capacity by 50%\n" +
-          "• Managed 30+ projects using Agile/Kanban methodologies\n" +
-          "• Enhanced security with Tomcat 9 upgrade and SonarQube implementation",
+        description: "• Designed and built a website for the SAMHSA intervention project, enabling the administration of various surveylevels with results dynamically displayed based on answers provided\n" +
+          "• Devised insightful dashboards and reports using React and Python by identifying trends for data visualization and successfully deployed the project on AWS",
         type: "work"
       },
     {
-      id: 3,
+      id: 4,
       year: "Sept 2020 - Aug 2023",
       title: "Full Stack Developer",
       institution: "Standard Chartered Bank",
-      description: "• Developed RESTful APIs with Spring Boot & Hibernate achieving sub-second response times\n" +
-        "• Reduced processing time by 40% using Apache Camel parallel threading\n" +
-        "• Migrated SOAP to REST APIs, increasing transaction capacity by 50%\n" +
-        "• Managed 30+ projects using Agile/Kanban methodologies\n" +
-        "• Enhanced security with Tomcat 9 upgrade and SonarQube implementation",
+      description: "• Developed over 50 webpages from scratch encompassing Front-End, Back-End, API Integration and Testing, worked on over 300 Jira and ADO issues within an Agile (Scrum/Kanban) environment\n" +
+        "• Spearheaded on the Bank UI project, leveraging Storybook to architect a comprehensive library of reusable components with flexible properties thereby decreasing code duplication by 70%\n" +
+        "• Engineered a cutting-edge questionnaire framework in React, leading to an astounding 95% reduction in code rewrites for the development of new applications\n" +
+        "• Created user-friendly tools to reckon team indices, performed data manipulation using JavaScript for showcasing it in dashboards using recharts, consequently increasing monthly visitors to about 42.7K\n" +
+        "• Integrated Jira and Clarity data for computing predictability, stability, velocity and say/do ratio of squads and developed metrics thereby helping teams to increase efficiency by 85%\n" +
+        "• Employed Redux to manage application state, ensuring efficient data flow, centralized state management, and seamless integration between components in the front-end development process\n" +
+        "• Orchestrated the development of over 200 test cases for user interfaces, adhering rigorously to SonarQube's stringent quality standards, resulting in robust and reliable software excelling in performance",
       type: "work"
     },
     {
-      id: 4,
+      id: 5,
       year: "Aug 2016 - April 2020",
       title: "Bachelor of Engineering",
       institution: "College of Engineering Guindy, Anna University",
-      description: "• Secured top grades in Data Structures and Object-Oriented Programming\n" +
+      description: "• Secured top grades in Data Structures and Object-Oriented Programming and Data Structures & Algorithms\n" +
         "• Completed practical training in OOP Lab with hands-on Java programming\n" +
         "• Developed strong foundation in programming alongside electronics expertise",
       type: "education"

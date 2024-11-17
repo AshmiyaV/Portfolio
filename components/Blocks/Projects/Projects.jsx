@@ -7,26 +7,36 @@ import Blobs from "@/components/UI/Elements/Blobs/Blobs";
 import Title from '@/components/UI/Elements/Title/Title';
 
 export default function Projects(props) {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(null);
 
   const handleOnClick = (projectLink) => {
     window.open(`${projectLink}`);
   }
+
+  const onExpand = (id) => {
+    if(id === expanded){
+      setExpanded(null)
+    }
+    else{
+      setExpanded(id)
+    }
+  };
+
   const Projects = [
     {
       projectTitle: "YouthGPS",
-          projectDesc: "A community-focused web platform that connects people with local events, marketplace activities, and community support services based on their location. The platform enables users to organize events, buy/sell items, share excess food, coordinate donations, and stay updated with local happenings and weather conditions, all within their specific zip code area.",
+          projectDesc: "YouthGPS is a mental health and substance abuse screening platform developed for SAMHSA that provides adaptive assessments for youth. The system features dynamic questionnaires that adjust based on user responses, real-time visualization dashboards for tracking outcomes, and secure data handling protocols. Built with React and Python, deployed on AWS, the platform streamlines the screening process while ensuring sensitive health data protection and providing administrators with actionable insights through comprehensive reporting tools.",
           projectLink: "https://github.com/AshmiyaV/youth-gps",
           blobTypeForProject: "v1",
           blobType: "blobV1"
   },
     {
         projectTitle: "locALL",
-            projectDesc: "YouthGPS is a mental health and substance abuse screening platform developed for SAMHSA that provides adaptive assessments for youth. The system features dynamic questionnaires that adjust based on user responses, real-time visualization dashboards for tracking outcomes, and secure data handling protocols. Built with React and Python, deployed on AWS, the platform streamlines the screening process while ensuring sensitive health data protection and providing administrators with actionable insights through comprehensive reporting tools.",
+            projectDesc: "A community-focused web platform that connects people with local events, marketplace activities, and community support services based on their location. The platform enables users to organize events, buy/sell items, share excess food, coordinate donations, and stay updated with local happenings and weather conditions, all within their specific zip code area.",
             projectLink: "https://github.com/AshmiyaV/loc-all",
             // blobTypeForProject: "v1",
             blobType: "blobV1"
-    },
+  },
     {
         projectTitle: "CloudGuard",
             projectDesc: "A serverless architecture on Google Cloud Platform that automates real-time notifications and database operations using Cloud Functions and Pub/Sub. The project implements Infrastructure as Code with Terraform and includes CI/CD through GitHub Actions, making it a comprehensive solution for managing cloud-based notification systems and operational tasks.",
@@ -42,13 +52,13 @@ export default function Projects(props) {
         {Projects.map((project, index) => (
     <div key={index} className={styles.projectWindow} id={index}>
               {project.blobTypeForProject && <Blobs type={project.blobTypeForProject} classVariable={`${styles.blob} ${styles[project.blobType]}`}/>}
-      <div className={`${styles.projectWrapper} ${project.className || ''} ${isExpanded ? styles.expanded : ''}`}>
+      <div className={`${styles.projectWrapper} ${project.className || ''} ${expanded === index ? styles.expanded : ''}`}>
         <div className={styles.aboutProject}>
           <div className={styles.projectHeader}>
             <h2 className={styles.projectTitle}>{project.projectTitle}</h2>
             <button 
-              className={`${styles.expandToggle} ${isExpanded ? styles.expanded : ''}`}
-              onClick={() => setIsExpanded(!isExpanded)}
+              className={`${styles.expandToggle} ${expanded === index ? styles.expanded : ''}`}
+              onClick={() => onExpand(index)}
             >
               <FaChevronDown />
             </button>
