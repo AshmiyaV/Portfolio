@@ -4,7 +4,7 @@
     "showOnNavigation":  true,
     "showOnFooter":  true,
     "title": "Skills",
-    "description": "Check out the things I'm good at, from building websites to design and more.",
+    "description": "Explore an overview of my skills, demonstrating expertise in key technologies for building efficient and scalable solutions.",
     "image": "",
     "link": "#skills"
   },
@@ -13,7 +13,7 @@
     "showOnNavigation":  true,
     "showOnFooter":  true,
     "title": "Experience",
-    "description": "Check out the things I'm good at, from building websites to design and more.",
+    "description": "Check out a summary of my professional experience and the significant outcomes I've achieved throughout my career.",
     "image": "",
     "link": "#experience"
   },
@@ -22,7 +22,7 @@
     "showOnNavigation":  true,
     "showOnFooter":  true,
     "title": "Projects",
-    "description": "Here's a curated selection showcasing my expertise and the achieved results.",
+    "description": "Here's a collection of my projects, showcasing the innovative solutions and impactful results I've delivered.",
     "image": "",
     "link": "#projects"
   },
@@ -31,7 +31,7 @@
     "showOnNavigation":  true,
     "showOnFooter":  true,
     "title": "Resume",
-    "description": "See my work history and what I've achieved in a quick and easy resume.",
+    "description": "See a concise summary of my professional background, highlighting key experiences, skills, and achievements.",
     "image": "",
     "link": "#resume"
   },

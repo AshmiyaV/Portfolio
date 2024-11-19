@@ -5,36 +5,36 @@ import { FaJava, FaPython, FaNodeJs, FaAws, FaGithub, FaAngular, FaRProject } fr
 import { DiMongodb, DiPostgresql, DiMysql, DiJenkins } from "react-icons/di";
 import { SiReact, SiSpringboot, SiBootstrap, SiExpress, 
          SiRedux, SiGradle, SiApachejmeter, SiHibernate, SiTerraform, 
-         SiGooglecloud, SiMicrosoftazure, SiIbmcloud, SiOracle, 
-         SiNumpy, SiPandas } from "react-icons/si";
-import { TbBrandJavascript, TbBrandHtml5, TbBrandTypescript } from "react-icons/tb";
+         SiGooglecloud, SiMicrosoftazure, SiOracle, 
+         SiNumpy, SiPandas, SiTypescript, SiJavascript, SiHtml5, SiNextdotjs } from "react-icons/si";
 import { VscTerminalCmd } from "react-icons/vsc";
 
 export default function SkillCard({id}) {
   const [activeTitle, setActiveTitle] = useState(null);
 
   const handleIconInteraction = (title) => {
-    setActiveTitle(activeTitle === title ? null : title);
+    setActiveTitle(title);
   };
 
   const skillsData = {
     languages: [
+      { icon: <SiJavascript className={styles.techLogo}/>, title: 'JavaScript' },
+      { icon: <SiTypescript className={styles.techLogo}/>, title: 'TypeScript' },
       { icon: <FaJava className={styles.techLogo}/>, title: 'Java' },
       { icon: <FaPython className={styles.techLogo}/>, title: 'Python' },
-      { icon: <TbBrandHtml5 className={styles.techLogo}/>, title: 'HTML 5' },
-      { icon: <TbBrandJavascript className={styles.techLogo}/>, title: 'JavaScript' },
-      { icon: <TbBrandTypescript className={styles.techLogo}/>, title: 'TypeScript' },
+      { icon: <SiHtml5 className={styles.techLogo}/>, title: 'HTML 5' },
       { icon: <VscTerminalCmd className={styles.techLogo}/>, title: 'Unix Commands' },
       { icon: <SiTerraform className={styles.techLogo}/>, title: 'Terraform' },
       { icon: <FaRProject className={styles.techLogo}/>, title: 'R' }
     ],
     frameworks: [
-      { icon: <SiSpringboot className={styles.techLogo}/>, title: 'Spring Boot' },
       { icon: <SiReact className={styles.techLogo}/>, title: 'ReactJS' },
+      { icon: <SiSpringboot className={styles.techLogo}/>, title: 'Spring Boot' },
+      { icon: <SiNextdotjs className={styles.techLogo}/>, title: 'Next.js' },
       { icon: <FaAngular className={styles.techLogo}/>, title: 'Angular' },
-      { icon: <SiBootstrap className={styles.techLogo}/>, title: 'Bootstrap' },
       { icon: <FaNodeJs className={styles.techLogo}/>, title: 'Node.js' },
-      { icon: <SiExpress className={styles.techLogo}/>, title: 'Express.js' }
+      { icon: <SiExpress className={styles.techLogo}/>, title: 'Express.js' },
+      { icon: <SiBootstrap className={styles.techLogo}/>, title: 'Bootstrap' },
     ],
     libraries: [
       { icon: <SiRedux className={styles.techLogo}/>, title: 'Redux' },
@@ -45,16 +45,15 @@ export default function SkillCard({id}) {
       { icon: <SiPandas className={styles.techLogo}/>, title: 'Pandas' }
     ],
     databases: [
-      { icon: <SiOracle className={styles.techLogo}/>, title: 'Oracle SQL' },
       { icon: <DiPostgresql className={styles.techLogo}/>, title: 'PostgreSQL' },
       { icon: <DiMysql className={styles.techLogo}/>, title: 'MySQL' },
-      { icon: <DiMongodb className={styles.techLogo}/>, title: 'MongoDB' }
+      { icon: <DiMongodb className={styles.techLogo}/>, title: 'MongoDB' },
+      { icon: <SiOracle className={styles.techLogo}/>, title: 'Oracle SQL' },
     ],
     cloudDevOps: [
       { icon: <SiGooglecloud className={styles.techLogo}/>, title: 'Google Cloud Platform' },
       { icon: <FaAws className={styles.techLogo}/>, title: 'Amazon Web Services' },
       { icon: <SiMicrosoftazure className={styles.techLogo}/>, title: 'Microsoft Azure' },
-      { icon: <SiIbmcloud className={styles.techLogo}/>, title: 'IBM Cloud' },
       { icon: <FaGithub className={styles.techLogo}/>, title: 'Github Actions' },
       { icon: <DiJenkins className={styles.techLogo}/>, title: 'Jenkins' }
     ]
