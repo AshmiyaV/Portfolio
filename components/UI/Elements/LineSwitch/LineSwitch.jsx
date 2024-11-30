@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './LineSwitch.module.scss';
 
-export default function LineSwitch({ Name, leftLabel = 'List', rightLabel = 'Circular', onToggle }) {
+export default function LineSwitch({ Name, leftLabel = 'Circular', rightLabel = 'List', onToggle }) {
   const [selected, setSelected] = useState('circular');
 
   const handleChange = (event) => {

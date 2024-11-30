@@ -57,7 +57,7 @@ export const Skills = [
   },
   {
     "icon": "IconReact",
-    "image": "/icon/next.js.svg",
+    "image": "/icon/next-js.svg",
     "title": "Next.js",
     // "subtitle": "Next.js, Vercel",
     "description": "I build fast, scalable, and SEO-friendly web applications with Next.js, leveraging server-side rendering and static site generation for optimal performance."

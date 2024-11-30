@@ -37,7 +37,7 @@ export default function SkillsMain() {
                     <Blobs type={'v1'} classVariable={`${styles.blob} ${styles.blobV1}`}/>
                 </div>
                     <Title><span>My</span> <br/> <span>Skillset</span></Title>
-                    <LineSwitch Name="SkillsView" leftLabel="List" rightLabel="Circular" onToggle={handleSelectedView} />
+                    <LineSwitch Name="SkillsView" leftLabel="Circular" rightLabel="List" onToggle={handleSelectedView} />
                     {
                         selectedView === "circular" ?
                         (
